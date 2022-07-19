@@ -31,6 +31,13 @@ export default {
 </script>
 
 <style lang="scss">
+.el-menu--collapse {
+	.el-menu-item .el-tooltip,
+	.el-submenu__title {
+		padding: 0 !important;
+		text-align: center;
+	}
+}
 .box-card-temperature {
 	height: 400px;
 	margin-bottom: 10px;

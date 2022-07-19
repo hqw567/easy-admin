@@ -25,7 +25,7 @@
 						</svg>
 						<span slot="title">首页</span>
 					</el-menu-item>
-					<el-submenu index="1">
+					<el-submenu index="/components">
 						<template slot="title">
 							<svg class="icon" aria-hidden="true">
 								<use xlink:href="#icon-keai"></use>
@@ -33,9 +33,11 @@
 							<span>组件</span>
 						</template>
 						<el-menu-item-group>
-							<el-menu-item index="/form">表单</el-menu-item>
-							<el-menu-item index="/table">表格</el-menu-item>
-							<el-menu-item index="/editor">富文本编辑器</el-menu-item>
+							<el-menu-item index="/components/form">表单</el-menu-item>
+							<el-menu-item index="/components/table">表格</el-menu-item>
+							<el-menu-item index="/components/editor">
+								富文本编辑器
+							</el-menu-item>
 						</el-menu-item-group>
 						<el-submenu index="1-4">
 							<template slot="title">选项4</template>
@@ -43,9 +45,11 @@
 						</el-submenu>
 					</el-submenu>
 					<el-menu-item index="2">
-						<svg class="icon" aria-hidden="true">
-							<use xlink:href="#icon-keai"></use>
-						</svg>
+						<template>
+							<svg class="icon" aria-hidden="true">
+								<use xlink:href="#icon-keai"></use>
+							</svg>
+						</template>
 						<span slot="title">错误页</span>
 					</el-menu-item>
 					<el-menu-item index="4">
@@ -80,7 +84,16 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+.el-menu-item,
+.el-submenu__title {
+	& > span {
+		margin-left: 5px;
+	}
+}
+.el-menu {
+	border-right: 0;
+}
 .el-menu-item {
 	color: #fff;
 }
